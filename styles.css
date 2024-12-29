@@ -1,0 +1,206 @@
+/* Основные стили для body */
+body {
+  font-family: Arial, sans-serif;
+  background: url('images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #39080e;
+  color: #FFD700; /* Установим цвет по умолчанию */
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  min-height: 100vh;
+  overflow-x: hidden; /* Убираем горизонтальный скролл */
+}
+
+/* Убираем линии и сохраняем размещение короны */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crown-image {
+  max-height: 77px;
+  margin: 0 10px;
+}
+
+/* Стили для секций */
+.section-titles {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.title-section {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center; /* Центрируем текст внутри title-section */
+}
+
+.title-section h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center; /* Центрируем h1 */
+}
+
+.title-section p {
+  font-size: 1em;
+  line-height: 1.4;
+  text-align: left; /* Выровняем p по левому краю */
+  color: #FFE4B5; /* Бледно-светло золотой цвет для абзацев */
+}
+
+/* Стили для секции видео */
+.videos {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.video-item {
+  flex: 1;
+  max-width: 30%; /* Максимальная ширина видео */
+}
+
+.video-item iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+/* Кнопка-ссылка для ПК */
+.see-more {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.see-more a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1em;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.see-more a:hover {
+  color: #FFEC8B;
+}
+
+/* Стили для секции ссылок */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%; /* Занимаем всю ширину */
+  box-sizing: border-box; /* Учитываем padding в ширину */
+  padding: 0 10px; /* Отступы для кнопок */
+}
+
+.link {
+  display: inline-flex; /* Используем inline-flex для центрирования по содержимому */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFD700;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  padding: 15px 30px; /* Увеличиваем размер кнопок */
+  font-size: 1.2em; /* Увеличиваем размер текста */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%; /* Устанавливаем ширину кнопок по умолчанию */
+}
+
+.link:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px); /* Немного поднимаем кнопку при наведении */
+}
+
+.link img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.link span {
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* Медиа-запросы для экранов меньше 768px */
+@media (max-width: 768px) {
+  .section-titles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  /* Видео для мобильных устройств */
+  .videos {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .video-item {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .video-item.hide-on-mobile {
+    display: none; /* Скрываем дополнительные видео на мобильных устройствах */
+  }
+
+  .see-more {
+    justify-content: center;
+  }
+
+  .see-more a {
+    font-size: 1.2em;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Добавляем ширину для кнопок */
+    padding: 0 10px; /* Добавляем отступы */
+    text-align: center; /* Центрируем контейнеры для кнопок */
+  }
+
+  .link {
+    width: auto; /* Пусть кнопки занимают ширину контента */
+    display: inline-block; /* Пусть кнопки будут центроваться внутри родителя */
+    padding: 15px 20px; /* Уменьшаем padding для кнопок на мобильных */
+  }
+}
+
+/* Стили для кнопок на ПК */
+@media (min-width: 768px) {
+  .links {
+    justify-content: space-around;
+  }
+
+  .link {
+    flex: 1;
+    margin: 0 10px; /* Отступы между кнопками */
+  }
+}

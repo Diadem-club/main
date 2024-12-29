@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diadem Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Центральное изображение с короной и боковыми линиями -->
+    <header class="header-container">
+        <div class="line left-line"></div>
+        <img src="images/crown.png" alt="" class="crown-image">
+        <div class="line right-line"></div>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="section-titles">
+        <div class="title-section">
+            <h1 id="header_left"></h1>
+            <p id="content_left"></p>
+        </div>
+        <div class="title-section">
+            <h1 id="header_center"></h1>
+            <p id="content_center"></p>
+        </div>
+        <div class="title-section">
+            <h1 id="header_right"></h1>
+            <p id="content_right"></p>
+        </div>
+    </div>
+
+    <!-- Секция видео для ПК -->
+    <section class="videos">
+        <div class="video-item">
+            <iframe src="https://youtu.be/cIStDB4r0yM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-item hide-on-mobile">
+            <iframe src="https://youtu.be/R29QC5L-yME" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-item hide-on-mobile">
+            <iframe src="https://youtu.be/pZBGB_Hd3Pk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Кнопка-ссылка для ПК -->
+    <div class="see-more">
+        <a id="more_videos" href="https://www.youtube.com/@diadem_club"></a>
+    </div>
+
+    <!-- Ссылки с логотипами и текстом -->
+    <section class="links">
+        <div class="link" onclick="window.location.href='https://bongamodels.com?fuid=Cuminator-XL'">
+            <img src="images/redirect_icon.png" alt="">
+            <span id="register"></span>
+        </div>
+        <div class="link" onclick="window.location.href='https://t.me/angel_in_9'">
+            <img src="images/telegram_icon.png" alt="">
+            <span id="help"></span>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
